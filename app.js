@@ -4,7 +4,7 @@ const path = require('path');
 const { Sequelize } = require('sequelize');
 const User = require("./users.model")
 const app = express();
-const port = 3000;
+const port = 8080;
 app.use(express.json())
 
 
