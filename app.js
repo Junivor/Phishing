@@ -4,8 +4,7 @@ const path = require('path');
 const { Sequelize } = require('sequelize');
 const User = require("./users.model")
 const app = express();
-const port = 8080;
-const host = '54.255.165.241'
+const port = 5001;
 app.use(express.json())
 
 
@@ -38,11 +37,7 @@ app.post("/login", async (req, res, next) => {
   })
 })
 
-app.listen(port, host, (err) => {
-  if (err) {
-    console.error('Error starting server:', err);
-    return;
-  }
+app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 }).on('error', (err) => {
   console.error('Server error:', err);
