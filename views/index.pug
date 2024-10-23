@@ -1,0 +1,27 @@
+//- views/index.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Facebook Login
+    link(rel="stylesheet", href="/css/style.css")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap")
+
+  body
+    .content
+      .flex-div
+        .name-content
+          h1#facebook.logo Facebook
+          p Connect with friends and the world around you on Facebook.
+
+        form#loginForm(action="#", method="POST")
+          input#email(type="text", placeholder="Email or Phone Number", required)
+          input#password(type="password", placeholder="Password", required)
+          button.login(type="submit") Log In
+          a(href="#") Forgot Password?
+          hr
+          button.create-account(type="button") Create New Account
+
+    script(src="/js/main.js")
