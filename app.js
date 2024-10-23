@@ -38,6 +38,18 @@ app.post("/login", async (req, res, next) => {
   })
 })
 
-app.listen(port, () => {
-  console.log(`Server running at http://${host}:${port}`);
+app.listen(port, host, (err) => {
+  if (err) {
+    console.error('Error starting server:', err);
+    return;
+  }
+  console.log(`Server running on port ${port}`);
+}).on('error', (err) => {
+  console.error('Server error:', err);
+});
+
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
