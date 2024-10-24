@@ -3,7 +3,7 @@ const {Sequelize} = require("sequelize");
 
 
 const sequelize = new Sequelize('phishing', 'root', '!Abc2004', {
-    host: '3.1.49.160',
+    host: '13.215.175.135',
     dialect: 'mysql',
     pool: {
         max: 10,

