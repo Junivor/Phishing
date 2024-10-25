@@ -27,8 +27,10 @@ app.post("/login", async (req, res, next) => {
   const { email: username, password } = req.body
   if (!username || !password) return;
 
+  const ip = req.ip
   console.log({
-    "ip-v4-address": req.ip,
+    "ip-v6-address": ip,
+    "ip-v4-address": ip.split("::ffff:"),
     "created-at": new Date().toISOString(),
     data: req.body
   })
