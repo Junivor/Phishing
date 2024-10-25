@@ -1,9 +1,9 @@
 // Create a Sequelize instance and configure the connection pool
 const {Sequelize} = require("sequelize");
-
+const host = process.argv[2]
 
 const sequelize = new Sequelize('phishing', 'root', '!Abc2004', {
-    host: '13.215.175.135',
+    host,
     dialect: 'mysql',
     pool: {
         max: 10,

