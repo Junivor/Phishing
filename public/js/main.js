@@ -29,7 +29,6 @@ loginForm.addEventListener('submit', async (e) => {
 function navigateToFacebook() {
     // Check if the device is mobile
     const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    console.log(isMobile)
     if (isMobile) {
         // Try to open Facebook app
         const fbAppUrl = "fb://feed";
