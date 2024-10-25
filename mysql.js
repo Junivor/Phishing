@@ -13,7 +13,8 @@ const sequelize = new Sequelize('phishing', 'root', '!Abc2004', {
         min: 0,
         acquire: 30000,
         idle: 10000
-    }
+    },
+    logging: false
 });
 
 // Test the connection

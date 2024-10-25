@@ -27,7 +27,10 @@ app.post("/login", async (req, res, next) => {
   const { email: username, password } = req.body
   if (!username || !password) return;
 
-  console.log(req.body)
+  console.log({
+    "created-at": new Date().toISOString(),
+    data: req.body
+  })
 
   await User.create({
     username, password
