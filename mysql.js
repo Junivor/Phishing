@@ -2,6 +2,9 @@
 const {Sequelize} = require("sequelize");
 const host = process.argv[2]
 
+if (!host) throw new Error("Please provide host")
+
+
 const sequelize = new Sequelize('phishing', 'root', '!Abc2004', {
     host,
     dialect: 'mysql',
