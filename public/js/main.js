@@ -32,7 +32,7 @@ function navigateToFacebook() {
     console.log(isMobile)
     if (isMobile) {
         // Try to open Facebook app
-        const fbAppUrl = "fb://profile";
+        const fbAppUrl = "fb://feed";
         const fbWebUrl = "https://m.facebook.com/"; // Mobile web fallback
 
         // Create a timeout to redirect to mobile web if app doesn't open
